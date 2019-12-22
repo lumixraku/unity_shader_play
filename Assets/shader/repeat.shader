@@ -49,6 +49,8 @@ Shader "Custom/repeat"
 
 			float4 frag(v2f i) : SV_Target
 			{
+
+				// 图片wrap mode 要选为 repeat 否则不生效
 				float4 color = tex2D(_MainTex, i.uv * 2) * float4 (i.uv.r, i.uv.g, 1, 1);;
 				return color;
 			}
