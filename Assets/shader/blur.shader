@@ -40,7 +40,7 @@ Shader "Custom/blur"
 			}
 			
 			sampler2D _MainTex;
-			float4 _MainTex_TexelSize;
+			float4 _MainTex_TexelSize; //实际texture 的大小  // UV的取值范围 [0, 1 ]
 
 			float4 box(sampler2D tex, float2 uv, float4 size)
 			{

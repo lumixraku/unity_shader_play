@@ -50,7 +50,7 @@ Shader "Custom/Displacement"
 				float2 distuv = float2(i.uv.x + _Time.x * 2, i.uv.y + _Time.x * 2);
 
 				float2 disp = tex2D(_DisplaceTex, distuv).xy;
-				disp = ((disp * 2) - 1) * _Magnitude;
+				disp = ((disp * 2) - 1) * _Magnitude;   //[0, 1] to [-1, 1]
 
 				float4 col = tex2D(_MainTex, i.uv + disp);
 				return col;
